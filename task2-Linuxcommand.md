@@ -4,11 +4,11 @@
 **To list files/directories**
 
 
-ls -l: To list all the files and directories in the current directories
+<sub>ls -l</sub>: To list all the files and directories in the current directories
 
 ls -la: To list all the files and directories inclding hidden file which start with dot(.) 
 
-ls *: List directory content along with its sub directory
+ls *:  List directory content along with its sub directory
 
 ls -i: List files and directories with index number
 
