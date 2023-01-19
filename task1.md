@@ -1,7 +1,7 @@
 
 **What is Devops?**
 
-==> ## Devops is the method which uses automation tools for continuous integration and deployment to deliver the application faster. It minimizes the application development lifecycle and delivers the quality application.
+==>  Devops is the method which uses automation tools for continuous integration and deployment to deliver the application faster. It minimizes the application development lifecycle and delivers the quality application.
 
 **What is Automation, Scaling, Infrastructure**
 
