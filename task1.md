@@ -3,7 +3,7 @@
 
 ==> Devops is the method which uses automation tools for continuous integration and deployment to deliver the application faster. It minimizes the application development lifecycle and delivers the quality application.
 
-What is Automation, Scaling, Infrastructure
+**What is Automation, Scaling, Infrastructure**
 
 ==> Automation:
 
@@ -24,6 +24,6 @@ We can manage infrastructure using code that can automate the configuration of i
 
 It helps to provisioning the server, monitor and configure it with less manual efforts.
 
-Why DevOps is Important, etc
+**Why DevOps is Important?**
 
 ==> By following devops practices application can be build and delivered faster. Also most of the daily tasks can be automated with automation tools and that time can be invested on making the application and infrastructure more secure and configuring it.
