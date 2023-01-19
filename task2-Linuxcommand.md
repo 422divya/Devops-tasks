@@ -4,7 +4,7 @@
 **To list files/directories**
 
 
-<sub>ls -l</sub>: To list all the files and directories in the current directories
+`ls -l`: To list all the files and directories in the current directories
 
 ls -la: To list all the files and directories inclding hidden file which start with dot(.) 
 
