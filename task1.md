@@ -1,7 +1,7 @@
 
 **What is Devops?**
 
-==> Devops is the method which uses automation tools for continuous integration and deployment to deliver the application faster. It minimizes the application development lifecycle and delivers the quality application.
+==> ## Devops is the method which uses automation tools for continuous integration and deployment to deliver the application faster. It minimizes the application development lifecycle and delivers the quality application.
 
 **What is Automation, Scaling, Infrastructure**
 
@@ -16,7 +16,7 @@ In vertical scaling we add more resources to the available instances like increa
 
 Resource referred: 
 
-(https://www.missioncloud.com/blog/horizontal-vs-vertical-scaling-which-is-right-for-your-app#)
+https://www.missioncloud.com/blog/horizontal-vs-vertical-scaling-which-is-right-for-your-app#
 
 ==> Infrastructure:
 
