@@ -1,6 +1,5 @@
 
-Images
-![](https://images.app.goo.gl/ckXwGWstTz1ZTA4r7)
+![image]([https://images.app.goo.gl/ckXwGWstTz1ZTA4r7](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngitem.com%2Fmiddle%2FhxhimJb_aws-devops-hd-png-download%2F&psig=AOvVaw0DTVWNDmFUTOuw78Vn_EuD&ust=1674224109630000&source=images&cd=vfe&ved=0CA4QjhxqFwoTCNjS8v7o0_wCFQAAAAAdAAAAABAD))
 
 
 
@@ -19,9 +18,8 @@ To make things work without manaul interventions is called automation. We can au
 Scaling is to increase the resources or add servers/system during high traffic for the application and to remove it during low traffic i.e scale down.
 In vertical scaling we add more resources to the available instances like increasing RAM, CPU, disk etc and Horizontal scaling means that we need to add the new instances
 
-Resource referred:
+Resource referred: 
 
-Links
 (https://www.missioncloud.com/blog/horizontal-vs-vertical-scaling-which-is-right-for-your-app#)
 
 ==> Infrastructure:
