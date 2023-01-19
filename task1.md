@@ -1,8 +1,4 @@
 
-![image]([https://images.app.goo.gl/ckXwGWstTz1ZTA4r7](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngitem.com%2Fmiddle%2FhxhimJb_aws-devops-hd-png-download%2F&psig=AOvVaw0DTVWNDmFUTOuw78Vn_EuD&ust=1674224109630000&source=images&cd=vfe&ved=0CA4QjhxqFwoTCNjS8v7o0_wCFQAAAAAdAAAAABAD))
-
-
-
 **What is Devops?**
 
 ==> Devops is the method which uses automation tools for continuous integration and deployment to deliver the application faster. It minimizes the application development lifecycle and delivers the quality application.
