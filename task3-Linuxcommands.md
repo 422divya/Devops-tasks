@@ -55,7 +55,7 @@ Kiwi
 Orange
 ```
 
-## To Show only bottom three fruits from the file
+**To Show only bottom three fruits from the file**
 
 ```
 # cat devops.txt |tail -3
@@ -64,7 +64,7 @@ Kiwi
 Orange
 ```
 
-To create another file Colors.txt with below content:
+**To create another file Colors.txt with below content:**
 
 ```
 # cat colors.txt 
@@ -78,7 +78,7 @@ Purple
 Grey
 ```
 
-To get the differece from both the files:
+**To get the differece from both the files:**
 
 ```
 # diff devops.txt colors.txt 
