@@ -1,6 +1,4 @@
-# Devops-tasks
-
-#This is my 90 days journey of Devops.
+This is my 90 days journey of Devops.
 
 I have made notes of tools that I learnt in this journey. Also the usefull commands which will be helpful to refer.
 
