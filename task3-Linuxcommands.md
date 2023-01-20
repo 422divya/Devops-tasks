@@ -99,3 +99,16 @@ Grey
 > Grey
 ```
 
+From above by using diff command we can get the differences in the both the files. 
+
+```
+`a` : Add
+`c` :change
+`d` : Delete
+```
+
+1,5c1,5 means line 1 to 5 in first file devops.txt needs to be replaced/changed to match line 1 to 5 in second file colors.txt. The changes need to be done are replace content starting with symbol `<` with content starting with `>` sign.
+
+So above output means in devops.txt `<` sign means need to delete that content and `>` sign indicates to add that content in devops.txt to make it same as of colors.txt.
+
+6a7,8 means in line 6 of devops.txt file add  7th and 8th line from colors.txt
