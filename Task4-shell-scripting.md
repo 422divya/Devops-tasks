@@ -12,3 +12,31 @@ In Devops shell scripting can be useful to automate the various activities like 
 We can write the ` #!/bin/sh` as well which is the bourne shell. If we mentione this while writing script the shell will run script using sh shell.
 
 **Write a Shell Script which prints I will complete #90DaysOofDevOps challenge**
+
+```
+$ cat printmsg.sh 
+#!/bin/bash
+
+echo "I will complete #90DaysOofDevOps challenge"
+
+Output:
+
+$ sh printmsg.sh 
+I will complete #90DaysOofDevOps challenge
+```
+
+**Write a Shell Script to take user input, input from arguments and print the variables.**
+
+```
+$ cat argument.sh 
+#!/bin/bash
+
+echo $1
+
+$ sh argument.sh hello
+hello
+```
+
+**Write an Example of If else in Shell Scripting by comparing 2 numbers**
+
+
