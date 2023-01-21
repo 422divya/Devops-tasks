@@ -69,4 +69,15 @@ Enter two numbers to compare
 33
 33 is greater than 10
 ```
+**Reverse the string**
+```
+$ cat reverse.sh 
+#!/bin/bash
 
+echo "enter sting again"
+read text
+
+output=$(echo $text|rev)
+
+echo $output
+```
