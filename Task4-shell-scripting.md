@@ -39,4 +39,34 @@ hello
 
 **Write an Example of If else in Shell Scripting by comparing 2 numbers**
 
+```
+ cat compare_two_numbers.sh 
+#!/bin/bash 
+
+echo "Enter two numbers to compare"
+
+read num1
+read num2
+
+if [ $num1 -gt $num2 ]
+then    
+        echo "$num1 is greater than $num2"
+        
+else    
+        echo "$num2 is greater than $num1"
+        
+ **OUTPUT**
+ 
+ $ sudo sh compare_two_numbers.sh 
+Enter two numbers to compare
+3
+1
+3 is greater than 1
+
+$ sudo sh compare_two_numbers.sh 
+Enter two numbers to compare
+10
+33
+33 is greater than 10
+```
 
