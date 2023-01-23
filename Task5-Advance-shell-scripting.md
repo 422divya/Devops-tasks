@@ -55,7 +55,7 @@ echo "Backup completed"
 **3- Read About Cron and Crontab, to automate the backup Script
 Cron is the system's main scheduler for running jobs or tasks unattended. A command called crontab allows the user to submit, edit or delete entries to cron. A crontab file is a user file that holds the scheduling information.**
 
-# schedulded backup script every month on 1st day of month at 12:00
+### schedulded backup script every month on 1st day of month at 12:00 
 
 ```
 $ crontab -l
