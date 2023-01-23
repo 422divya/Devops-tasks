@@ -30,3 +30,25 @@ output=`mkdir $1$i`
 echo "directory created $output"
 done
 ```
+
+**2-Create a Script to backup all your work done till now.**
+
+```
+#!/bin/bash
+
+source_dir=/home/ec2-user
+destination_directory=/tmp
+
+datetime=`date "+%Y-%m-%d-%H-%M-%S"`
+
+backup_file=$destination_directory/$datetime.tgz
+
+echo $backup_file
+
+echo "Taking backup"
+echo "==========================="
+tar -czf $backup_file $source_dir
+
+echo "Backup completed"
+```
+
