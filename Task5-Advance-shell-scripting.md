@@ -61,3 +61,17 @@ Cron is the system's main scheduler for running jobs or tasks unattended. A comm
 $ crontab -l
 0 12 1 * * bash /home/ec2-user/script/backup.sh >> /tmp/backup-cron-log.txt
 ```
+
+**4-Create 2 users and just display their Usernames**
+```
+$ sudo useradd user1
+$ sudo useradd user2
+$ sudo passwd user1
+$ sudo passwd user2
+
+$ id user1
+uid=5005(user1) gid=5006(user1) groups=5006(user1)
+$ id user2
+uid=5006(user2) gid=5007(user2) groups=5007(user2)
+```
+
