@@ -12,6 +12,8 @@ We can can clone the repository and make the changes on the code and push it on 
 
 ==> Git is the command line tool used to manage the and track the the changes in the file/code. Github is the GUI version of the git use to store the repositories.
 
+==> Git is installed locally on the system, Github is hosted on webservice.
+
 **How do you create a new repository on GitHub?**
 
 ==> Login to the github ==> Go in profile ==> Your Repositories ==> Click on New
