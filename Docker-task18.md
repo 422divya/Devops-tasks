@@ -5,18 +5,29 @@
 ==========================
 
 $ cat docker-compose.yml 
+
 version: '3.3'
+
 services:
+
   web:
+  
     image: httpd:latest
+    
     ports:
+    
       - 80:80
 
   db:
+  
     image: postgres:latest
+    
     ports:
+    
       - 5432:5432
+      
     environment:
+    
        POSTGRES_PASSWORD: test@123
        
 ==========================
