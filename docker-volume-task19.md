@@ -1,5 +1,5 @@
-# Creating the volume and binding it to the container so that the data can be saved in hosts volume as well. If container goed down or deleted the data is saved in the volume on hosts. 
-Also same volume can be used on many containers. 
+** Creating the volume and binding it to the container so that the data can be saved in hosts volume as well. If container goed down or deleted the data is saved in the volume on hosts. 
+Also same volume can be used on many containers. **
  
  
  $ cat /home/ec2-user/docker-mount/test 
