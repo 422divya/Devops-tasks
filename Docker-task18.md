@@ -2,7 +2,7 @@
 
 1- Created below docker compose file to create container for apache and postgres db container.
 
-# cat docker-compose.yml 
+$ cat docker-compose.yml 
 version: '3.3'
 services:
   web:
