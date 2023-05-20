@@ -2,6 +2,8 @@
 
 1- Created below docker compose file to create container for apache and postgres db container.
 
+==========================
+
 $ cat docker-compose.yml 
 version: '3.3'
 services:
@@ -16,8 +18,10 @@ services:
       - 5432:5432
     environment:
        POSTGRES_PASSWORD: test@123
+       
+==========================
 
-# docker-compose up
+$ docker-compose up
 Creating network "docker_default" with the default driver
 Pulling web (httpd:latest)...
 latest: Pulling from library/httpd
