@@ -67,3 +67,30 @@ Below are the steps to configure the credentials for the GitHub in Jenkins:
 8- Select "Enter directly" option under private key and copy the private key from the server and click on save.
 
 9- Now jenkins can communicate with github using passwordless ssh connectivity.
+
+
+
+Task2- USed docker-compose file to create multiple container. But at first receivd below error while running Jenkins jobs.
+
+
+Started by user Divya
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/docker-compose
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/422divya/Docker-compose.git
+ > git init /var/lib/jenkins/workspace/docker-compose # timeout=10
+Fetching upstream changes from https://github.com/422divya/Docker-compose.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+ > git fetch --tags --force --progress -- https://github.com/422divya/Docker-compose.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/422divya/Docker-compose.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse origin/master^{commit} # timeout=10
+ERROR: Couldn't find any revision to build. Verify the repository and branch configuration for this job.
+Finished: FAILURE
+
+After changing the jenkins job configuration it got fixed. Issue was under Sorce code management "Branch to build was mentioned as master" due to which while fetching the code from the github repository it was unable to find it as the code was in main branch. After changing from master to main code was executed successfully.
