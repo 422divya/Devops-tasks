@@ -1,0 +1,33 @@
+- Created jenkins file for below activity:
+
+1- Login to Dockerhub
+2- Pull tomcat image from it
+3- Create docker container
+
+=======================================
+
+pipeline {
+    agent any
+    stages {
+        stage('pull image from dockerhub') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'dockeruser', passwordVariable: 'dockerpassword')])
+                
+                {
+                    
+                sh "docker login -u ${env.dockeruser} -p ${env.dockerpassword}"
+                sh "docker pull tomcat:latest"
+            }
+        }
+        }
+        
+      
+        
+        stage('Building the container') {
+            steps {
+                sh "docker run -d -p 80:80 tomcat"
+            }
+        }
+    }
+}
+=======================================
