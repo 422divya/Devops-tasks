@@ -31,3 +31,21 @@ pipeline {
     }
 }
 =======================================
+
+$ docker images
+REPOSITORY         TAG             IMAGE ID       CREATED       SIZE
+job-webhook_todo   latest          5f580f7ea989   2 days ago    104MB
+tomcat             latest          c43980686364   4 days ago    475MB   <<= downlaoded tomcat image
+todo-sample        latest          eaabef330e95   4 days ago    104MB
+postgres           latest          f14b0d96cff9   2 weeks ago   379MB
+httpd              latest          b4f91978e2cc   2 weeks ago   145MB
+hello-world        latest          9c7a54a9a43c   3 weeks ago   13.3kB
+node               12.2.0-alpine   f391dabf9dce   4 years ago   77.7MB
+
+
+$ docker ps
+CONTAINER ID   IMAGE     COMMAND             CREATED          STATUS          PORTS                                         NAMES
+267a74db60c6   tomcat    "catalina.sh run"   50 seconds ago   Up 49 seconds   0.0.0.0:80->80/tcp, :::80->80/tcp, 8080/tcp   quirky_taussig
+
+
+Image of the pipeline attached = docker-pipeline
