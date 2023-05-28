@@ -167,3 +167,96 @@ kustomizeVersion: v5.0.1
 8- Now out minikube cluster is running and kubectl is also installed. We can use it to deploy containers and get to know how kubernetes works and it's various components.
 
 
+
+# Task 2: Create your first pod on Kubernetes through minikube.
+
+1- Created the nginx pod by using below pod.yml file
+
+=====================
+
+]# cat pod.yml 
+
+apiVerison: v1
+
+kind: pod
+
+metadata:
+
+    name: ngnix-pod
+ 
+spec:
+
+  containers:
+  
+      - name: ngnix-container-pod
+      
+        image: divya422/nginx:latest
+        
+        ports:
+        
+           - ContainerPort:  80
+
+=====================
+
+- But while running, it created below error message. So cross check your yml syntax for maniest files.
+
+]# kubectl apply -f pod.yml 
+
+Error from server (BadRequest): error when creating "pod.yml": pod in version "v1" cannot be handled as a Pod: no kind "pod" is registered for version "v1" in scheme "pkg/api/legacyscheme/scheme.go:30"
+
+
+- Above error was pointing to the "kind: pod". In pod P should be capital, "kind: Pod".
+-
+=====================
+
+]# cat pod.yml 
+
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+
+   name: ngnix-pod
+   
+ 
+spec:
+
+  containers:
+  
+       - name: ngnix-container-pod
+        
+         image: divya422/nginx:latest
+        
+         ports:
+        
+            - containerPort:  80
+
+=====================
+           
+ - ]# kubectl apply -f pod.yml 
+ - 
+pod/ngnix-pod created
+
+
+- ]# kubectl get pods
+- 
+NAME        READY   STATUS             RESTARTS   AGE
+
+ngnix-pod   0/1     ImagePullBackOff   0          47s
+
+
+- You can check if the container is created by going in minikube.
+
+]# minikube ssh
+
+docker@minikube:~$ 
+
+Below you can see container is created for nginx:
+
+docker@minikube:~$ docker ps
+
+CONTAINER ID   IMAGE     
+COMMAND                  CREATED              STATUS              PORTS     NAMES
+9dcc78042931   registry.k8s.io/pause:3.9      "/pause"                 About a minute ago   Up About a minute             k8s_POD_ngnix-pod_default_176648a3-0f39-424d-8600-920ddc0aaeac_0
+
