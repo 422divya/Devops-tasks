@@ -120,11 +120,17 @@ CONTAINER ID   IMAGE                                 COMMAND                  CR
 =================
 
 ]# minikube status
+
 minikube
+
 type: Control Plane
+
 host: Running
+
 kubelet: Running
+
 apiserver: Running
+
 kubeconfig: Configured
 
 =================
