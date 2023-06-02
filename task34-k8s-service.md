@@ -138,5 +138,30 @@ $ curl -L  http://192.168.49.2:30302
    3- Loadbalancing: It uses LB from cloud providers to send the traffic from external to the pod. It is used whrn we want to expose service to the outside world.
    
    
+   **Endpoint:
    
+   Endpoints that keep the list of IP addresses up to date for the service to forward its traffic.
+   
+~~~~~~~~~~~~~~
+$ kubectl describe services todo-service -n todo
+   
+Name:                     todo-service
+Namespace:                todo
+Labels:                   <none>
+Annotations:              <none>
+Selector:                 app=todo-app
+Type:                     LoadBalancer
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.101.50.146
+IPs:                      10.101.50.146
+Port:                     <unset>  8000/TCP
+TargetPort:               8000/TCP
+NodePort:                 <unset>  32027/TCP
+Endpoints:                10.244.0.12:8000,10.244.0.13:8000     <<<== List of IP of the pods
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+~~~~~~~~~~~~~~
+
 
