@@ -91,13 +91,13 @@ spec:
 
 ==> Using below command to get the service created and to access it inside the cluster:
 
-# kubectl get service --namespace todo
+$ kubectl get service --namespace todo
 
 NAME           TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
 
 todo-service   ClusterIP   10.101.50.146   <none>        8000/TCP   23s
 
-  # minikube service todo-service -n todo
+$ minikube service todo-service -n todo
   
 |-----------|--------------|-------------|---------------------------|
 | NAMESPACE |     NAME     | TARGET PORT |            URL            |
@@ -106,11 +106,11 @@ todo-service   ClusterIP   10.101.50.146   <none>        8000/TCP   23s
 |-----------|--------------|-------------|---------------------------|
 
   
-  # minikube service todo-service -n todo --url
+$ minikube service todo-service -n todo --url
   
 http://192.168.49.2:30302
 
-# curl -L  http://192.168.49.2:30302
+$ curl -L  http://192.168.49.2:30302
 
   <!DOCTYPE html>
 
