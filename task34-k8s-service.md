@@ -126,4 +126,17 @@ $ curl -L  http://192.168.49.2:30302
 
         </style>
     </head>
+   
+   
+   
+   **Types of services:
+   
+   1- ClusterIP: Using this tyoe the pod is not accessible outside cluster. It will only accessible inside. So one podd can comminicate with another within cluster.
+   
+   2- NodePort: To access the application outside the cluster we use this type of service. It assign the port to the node so application can on that port.
+   
+   3- Loadbalancing: It uses LB from cloud providers to send the traffic from external to the pod. It is used whrn we want to expose service to the outside world.
+   
+   
+   
 
