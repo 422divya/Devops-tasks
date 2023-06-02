@@ -134,8 +134,9 @@ $ curl -L  http://192.168.49.2:30302
    1- ClusterIP: Using this tyoe the pod is not accessible outside cluster. It will only accessible inside. So one podd can comminicate with another within cluster.
    
    2- NodePort: To access the application outside the cluster we use this type of service. It assign the port to the node so application can on that port.
+   NodePort services are accessible outside the cluster. It creates a mapping of pods to its hosting node/machine on a static port. For example, you have a node with IP address 10.0.0.20 and a Redis pod running under it. NodePort will expose 10.0.0.20:30038, assuming the port exposed is 30038, which you can then access outside the Kubernetes cluster.
    
-   3- Loadbalancing: It uses LB from cloud providers to send the traffic from external to the pod. It is used whrn we want to expose service to the outside world.
+   3- Loadbalancing: It uses LB from cloud providers to send the traffic from external to the pod. It is used when we want to expose service to the outside world/internet.
    
    
    **Endpoint:
@@ -165,3 +166,8 @@ Events:                   <none>
 ~~~~~~~~~~~~~~
 
 
+   ** Ingress**
+   
+   ===> Ingress sits in between internet and the kubernetes cluster. It process traffic and determine which pods or services to forward. Main feature of Ingress is Loadbalancing, name-based virtual hosting, url routing and SSL termination.
+ It is collection of rules which uses Loadbalancer and NodePOrt service type for its functionality. 
+   
