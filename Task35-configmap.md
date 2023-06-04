@@ -83,7 +83,7 @@ deploy-namespace-test-6c57cc56f7-kqjdg   0/1     ContainerCreating            0 
 
 ==> Checked the logs as below and found the error was while finding for key environment. So as it was mention in properties in configmap I changed the env varaiable to map content to data.
 
-# kubectl describe pod -n todo deploy-namespace-test-5bc6bccbb7-j8vx6
+]# kubectl describe pod -n todo deploy-namespace-test-5bc6bccbb7-j8vx6
 Name:             deploy-namespace-test-5bc6bccbb7-j8vx6
 Namespace:        todo
 Priority:         0
@@ -187,3 +187,65 @@ TODO_SERVICE_PORT_8000_TCP_PROTO=tcp
 total 0
 drwxrwxrwx    3 root     root          95 Jun  4 06:54 text.txt
 ~~~~~~~~~~~~~~~~
+  
+  
+  
+  **Secrets:
+  
+  - I have created the mysql database by fetching the image from dockerhub. I have encoded password and created secret yaml file to store password and use it in deployment file.
+  
+  ~~~~~~~~~~~~~~~~
+  
+  # cat deployment-db.yml 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: database-pod
+   namespace: database
+   labels:
+      app: db
+spec:
+
+  replicas: 2
+  selector:
+    matchLabels:
+      app: db
+  template:
+    metadata:
+       labels:
+         app: db
+    spec:
+      containers:
+       - name: db-container
+         image: mysql:latest
+         ports:
+          - containerPort: 3306 
+         env:
+           - name: mysql_password
+             valueFrom:
+               secretKeyRef:
+                 name: secret
+                 key: root_password 
+  
+  ~~~~~~~~~~~~~~~~
+  
+  Secret file
+  
+  ~~~~~~~~~~~~~~~~
+  Encoded password as below:
+  
+  ]# echo -n "test@123" |base64
+dGVzdEAxMjM=
+
+  
+  ]# cat secret.yml 
+apiVersion: v1
+kind: Secret
+metadata:
+   name: secretpass
+   namespace: database
+type: Opaque
+data:
+  root_password: dGVzdEAxMjM=
+  
+  ~~~~~~~~~~~~~~~~
