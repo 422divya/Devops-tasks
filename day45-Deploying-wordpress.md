@@ -12,3 +12,4 @@ The database server could be connected to (which means your username and passwor
 6- On checking found db name was different which is 'mysqldb' on checking in DB created on AWS and 'db1' is identifier of DB.
 
 
+https://aws.amazon.com/getting-started/hands-on/deploy-wordpress-with-amazon-rds/
