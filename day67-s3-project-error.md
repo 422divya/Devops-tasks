@@ -1,3 +1,4 @@
+# While creating S3 bucket and IAM role, policies faced below error:
 
 
 [ec2-user@ip-172-31-7-211 s3-policy-attach]$ terraform plan
@@ -25,3 +26,24 @@ Terraform used the selected providers to generate the following execution plan. 
   + create
 
 Terraform will perform the following actions:
+
+# While applying the plan it failed with below error, due to insufficient permission for the user.
+
+  Enter a value: yes
+
+aws_iam_policy.new_policy_for_bucket: Creating...
+aws_iam_role.test-role: Creating...
+aws_s3_bucket.s3-bucket: Creating...
+aws_iam_policy.new_policy_for_bucket: Creation complete after 1s [id=arn:aws:iam::434309355563:policy/policy-bucket]
+aws_s3_bucket.s3-bucket: Creation complete after 2s [id=teraform-bucket-test1]
+aws_s3_bucket_public_access_block.public_access: Creating...
+aws_s3_bucket_versioning.s3-version: Creating...
+aws_s3_bucket_public_access_block.public_access: Creation complete after 0s [id=teraform-bucket-test1]
+aws_s3_bucket_versioning.s3-version: Creation complete after 2s [id=teraform-bucket-test1]
+╷
+│ Error: creating IAM Role (new-role): AccessDenied: User: arn:aws:iam::434309355563:user/terraform-user is not authorized to perform: iam:CreateRole on resource: arn:aws:iam::434309355563:role/new-role with an explicit deny in an identity-based policy
+│       status code: 403, request id: 1d3d0568-2b7d-4e98-96de-593ef49671fc
+│ 
+│   with aws_iam_role.test-role,
+│   on s3.tf line 61, in resource "aws_iam_role" "test-role":
+│   61: resource "aws_iam_role" "test-role"{
