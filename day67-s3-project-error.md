@@ -47,3 +47,19 @@ aws_s3_bucket_versioning.s3-version: Creation complete after 2s [id=teraform-buc
 │   with aws_iam_role.test-role,
 │   on s3.tf line 61, in resource "aws_iam_role" "test-role":
 │   61: resource "aws_iam_role" "test-role"{
+
+
+
+
+# Then faced below error which fixed by providing the S3 full access to the user
+
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+╷
+│ Error: reading Amazon S3 (Simple Storage) Bucket (teraform-bucket-test1): Forbidden: Forbidden
+│       status code: 403, request id: RNKBHMBZB2CEHAHS, host id: GSIS/xIwwIRnHyP2QIlziSg0JNfQb9ck7G6SFAV2JfMzDtSxhYlsUO4/L8utoP9EdalYe7LrdkY=
+│ 
+│   with aws_s3_bucket.s3-bucket,
+│   on s3.tf line 18, in resource "aws_s3_bucket" "s3-bucket":
+│   18: resource "aws_s3_bucket" "s3-bucket" {
+│ 
